@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/jquery/2.2.4/jquery.js"></script>
+</head>
+<body>
+<button>点击</button>
+<script>
+    $("button").click(function () {
+        // $.get("http://127.0.0.1:8080?a=1&b=2", function (res) {
+        //     console.log(res);
+        // });
+
+        $.ajax({
+            type: "get",
+            url: "/",
+            data: "a=1&b=2",
+            success: function(msg){
+                alert( "Data Saved: " + msg );
+            },
+            error: function () {
+                alert(1111);
+            }
+        });
+    })
+</script>
+</body>
+</html>

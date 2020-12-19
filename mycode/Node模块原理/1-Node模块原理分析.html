@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<!--
+require()其实就是读取文件
+
+执行从文件中读取代码
+eval 或者 new Function
+
+
+
+-->
+</body>
+<script>
+    // 字符串可以访问外界数据，不安全
+    // let str = "console.log('fadffad')";
+    // eval(str);
+
+    let str = "console.log('fadffad')";
+    let fn = new Function(str);
+    console.log(fn);
+    fn()
+</script>
+</html>
