@@ -23,9 +23,9 @@ windows     盘符开头是绝对路径   路径分隔符是右斜杠 \
 
 
  */
-// let res = path.isAbsolute('/a/b/index.html')
-// let res = path.isAbsolute('c:\\a\\b\\index.html')
-// let res = path.isAbsolute('a\\b\\index.html')
+// let res = path.isAbsolute('/a/b/index.html');
+// let res = path.isAbsolute('c:\\a\\b\\index.html');
+// let res = path.isAbsolute('a\\b\\index.html');
 // console.log(res);
 
 // path.sep 用于获取当前操作系统中路径的分隔符
@@ -41,6 +41,8 @@ windows     盘符开头是绝对路径   路径分隔符是右斜杠 \
 /*
 path.parse(path): 将路径转换为对象
 
+
+
 {
   root: '/',
   dir: '/a/b',
@@ -51,6 +53,15 @@ path.parse(path): 将路径转换为对象
 
 path.format(pathObject)：将对象转换为路径
  */
+// console.log(path.parse("/a/b/c/index.js"));
+// console.log(path.format({
+//     root: '/',
+//     dir: '/a/b',
+//     base: 'index.html',
+//     ext: '.html',
+//     name: 'index'
+// }));
+
 
 // let obj = path.parse("/a/b/index.html");
 // console.log(obj);
@@ -102,5 +113,5 @@ path.resolve([...paths])
 
 如果后面的参数是绝对路径，那么前面的参数忽略
  */
-let res = path.resolve("/foo/bar", "./baz");
+let res = path.resolve("foo/bar", "/baz");
 console.log(res);
